@@ -1,57 +1,84 @@
+/* Body & font */
 body {
-    font-family: Arial, sans-serif;
-    background: #1e1e1e;
-    color: #fff;
     margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0e0e0e;
+    color: #fff;
 }
 
+/* Header với background game */
 header {
+    position: relative;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1602524202896-c6fae4a4b273?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+}
+
+header .overlay {
+    background: rgba(0,0,0,0.6);
+    padding: 40px 20px;
+    border-radius: 15px;
 }
 
 header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 5px #000;
 }
 
 header p {
-    font-size: 1.2em;
-}
-
-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #2c2c2c;
-    border-radius: 10px;
-    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 30px;
 }
 
 .download-btn {
     display: inline-block;
-    padding: 15px 30px;
-    margin-top: 20px;
-    background: #ff416c;
-    color: white;
+    padding: 20px 50px;
     font-size: 1.5em;
+    color: #fff;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    border-radius: 12px;
     text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .download-btn:hover {
-    background: #ff4b2b;
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
+/* About section */
+section#about {
+    max-width: 900px;
+    margin: -80px auto 60px;
+    padding: 40px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+section#about h2 {
+    font-size: 2.5em;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+section#about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background: #111;
-    font-size: 0.9em;
+    font-size: 1em;
     color: #aaa;
 }
