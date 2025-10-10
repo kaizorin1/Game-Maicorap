@@ -51,6 +51,39 @@
         </div>
     </section>
 
+    <!-- Network Instructions Section -->
+    <section id="network">
+        <div class="container">
+            <h2>Hướng dẫn kết nối mạng LAN (ZeroTier) &amp; Radmin</h2>
+
+            <h3>Kết nối ZeroTier (mạng LAN ảo)</h3>
+            <ol>
+                <li>Tải và cài đặt ZeroTier:
+                    <ul>
+                        <li>Windows/macOS/Linux: truy cập <a href="https://www.zerotier.com/" target="_blank" rel="noopener">zerotier.com</a> và tải client phù hợp.</li>
+                    </ul>
+                </li>
+                <li>Mở ZeroTier One trên máy bạn.</li>
+                <li>Chọn <strong>Join Network</strong> và nhập <code>e4da7455b273ff3f</code> rồi nhấn <em>Join</em>.</li>
+                <li>Nếu chủ mạng (owner) yêu cầu phê duyệt, hãy thông báo cho người quản trị để họ cho phép thiết bị của bạn vào mạng.</li>
+                <li>Sau khi tham gia thành công, kiểm tra địa chỉ IP ảo được cấp trong giao diện ZeroTier — bây giờ các máy trong cùng mạng ZeroTier sẽ có thể kết nối như trong LAN.</li>
+                <li>Lưu ý bảo mật: chỉ chia sẻ Network ID với những người bạn tin tưởng. Nếu bạn quản lý mạng, cân nhắc bật quyền phê duyệt (Private) trong trang quản lý ZeroTier để kiểm soát thiết bị truy cập.</li>
+            </ol>
+
+            <h3>Kết nối Radmin (kết nối điều khiển từ xa)</h3>
+            <ol>
+                <li>Tải và cài đặt <a href="https://www.radmin.com/" target="_blank" rel="noopener">Radmin Viewer</a> hoặc <a href="https://www.radmin.com/" target="_blank" rel="noopener">Radmin Server</a> trên máy cần kết nối nếu cần.</li>
+                <li>Mở Radmin Viewer, chọn <strong>New Connection</strong>.</li>
+                <li>Trong ô <em>Address</em> nhập: <code>candycraft.com</code>.</li>
+                <li>Nhấn <em>Connect</em>. Khi được yêu cầu, nhập mật khẩu: <code>P@ssw0rd</code> và xác nhận.</li>
+                <li>Nếu kết nối bị chặn, kiểm tra tường lửa (firewall) trên cả 2 máy và đảm bảo port Radmin (mặc định 4899) được mở hoặc được chuyển tiếp đúng cách.</li>
+                <li>Lưu ý bảo mật: mật khẩu trên trang này là mật khẩu kết nối. Nếu đây là thông tin công khai, hãy cân nhắc thay đổi mật khẩu sau khi sử dụng để tránh truy cập trái phép.</li>
+            </ol>
+
+            <p><strong>Lưu ý chung:</strong> Hướng dẫn trên giả định bạn có quyền truy cập hợp lệ tới máy chủ/mạng. Việc sử dụng Network ID hoặc mật khẩu của người khác mà không có sự cho phép là hành vi không được phép và có thể vi phạm pháp luật. Luôn đảm bảo nhận được sự đồng ý trước khi kết nối.</p>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Game Maicorap. All rights reserved.</p>
