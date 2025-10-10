@@ -88,5 +88,31 @@
     <footer>
         <p>&copy; 2025 Game Maicorap. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Hiệu ứng cuộn mượt + xuất hiện
+        window.addEventListener('scroll', () => {
+          document.querySelectorAll('section').forEach(sec => {
+            const rect = sec.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) sec.classList.add('visible');
+          });
+        });
+
+        // Nút sao chép nhanh mã mạng
+        document.addEventListener('DOMContentLoaded', () => {
+          document.querySelectorAll('code').forEach(code => {
+            const btn = document.createElement('button');
+            btn.textContent = '📋';
+            btn.className = 'copy-btn';
+            code.insertAdjacentElement('afterend', btn);
+            btn.addEventListener('click', async () => {
+              await navigator.clipboard.writeText(code.textContent);
+              btn.textContent = '✅';
+              setTimeout(() => (btn.textContent = '📋'), 1200);
+            });
+          });
+        });
+    </script>
 </body>
 </html>
