@@ -3,116 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Maicorap - Tải Ngay</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Server Minecraft của chúng tôi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset cơ bản */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1602524811765-6f60c530c5e4?fit=crop&w=1950&q=80') center/cover no-repeat fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+
+        header h1 {
+            font-size: 3em;
+            z-index: 2;
+            animation: fadeInDown 2s ease-out;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 15px;
+            z-index: 2;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .btn-join {
+            margin-top: 30px;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(45deg,#ff6600,#ff0066);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+            animation: fadeIn 3s ease-out;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-join:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(255,102,0,0.5);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff6600;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 20px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            height: 4px;
+            width: 60px;
+            background: #ff6600;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        section p, section ul {
+            font-size: 1.1em;
+            color: #555;
+            margin-top: 15px;
+        }
+
+        section ul {
+            list-style: none;
+        }
+
+        section ul li {
+            margin: 10px 0;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 30px 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-50px);}
+            100% { opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px);}
+            100% { opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        /* Parallax background for sections */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+        }
+
+        #features {
+            background: url('https://images.unsplash.com/photo-1601972569850-7ff9ebd77b3c?fit=crop&w=1950&q=80') center/cover no-repeat fixed;
+        }
+
+        #contact {
+            background: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?fit=crop&w=1950&q=80') center/cover no-repeat fixed;
+        }
+
+        #features p, #contact p {
+            color: #fff;
+        }
+
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="overlay">
-            <h1>🎮 Game Maicorap</h1>
-            <p>Phiêu lưu, khám phá, và thử thách cực đỉnh!</p>
-            <a href="https://drive.google.com/file/d/18FwmmdTdPSZ6vZrQM6SqAg2wRrwl5gCl/view?usp=sharing" class="download-btn" target="_blank">
-                ⬇️ Tải Ngay
-            </a>
-        </div>
+
+    <nav>
+        <a href="#home">Trang Chủ</a>
+        <a href="#features">Tính Năng</a>
+        <a href="#contact">Liên Hệ</a>
+    </nav>
+
+    <header id="home">
+        <h1>Chào mừng đến với Server Minecraft</h1>
+        <p>Khám phá, Xây dựng và Tham gia cộng đồng lớn mạnh</p>
+        <button class="btn-join">Tham gia Ngay</button>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>Giới Thiệu Game</h2>
-            <p>Game Maicorap đưa bạn vào những màn phiêu lưu đầy màu sắc, thử thách độc đáo, và đồ họa bắt mắt. Chuẩn bị sẵn sàng cho những trận chiến kịch tính và giải đố thông minh!</p>
-        </div>
+    <section id="features" class="parallax">
+        <h2>Tính Năng Nổi Bật</h2>
+        <ul>
+            <li>Thế giới mở rộng lớn, đa dạng địa hình</li>
+            <li>Hệ thống nhiệm vụ hấp dẫn, phong phú</li>
+            <li>Cộng đồng thân thiện, hỗ trợ 24/7</li>
+            <li>Hỗ trợ nhiều phiên bản Minecraft</li>
+            <li>Sự kiện và minigame hàng tuần</li>
+        </ul>
     </section>
 
-    <!-- Features Section -->
-    <section id="features">
-        <div class="container">
-            <h2>Điểm Nổi Bật</h2>
-            <div class="feature-grid">
-                <div class="feature">
-                    <span>🕹️</span>
-                    <h3>Lối chơi hấp dẫn</h3>
-                    <p>Thử thách trí tuệ và kỹ năng qua nhiều màn chơi độc đáo.</p>
-                </div>
-                <div class="feature">
-                    <span>🎨</span>
-                    <h3>Đồ họa bắt mắt</h3>
-                    <p>Màu sắc sống động và hiệu ứng đẹp mắt tạo trải nghiệm ấn tượng.</p>
-                </div>
-                <div class="feature">
-                    <span>⚡</span>
-                    <h3>Tối ưu nhẹ</h3>
-                    <p>Chạy mượt mà trên nhiều thiết bị mà vẫn giữ chất lượng.</p>
-                </div>
-            </div>
-        </div>
+    <section id="contact" class="parallax">
+        <h2>Liên Hệ</h2>
+        <p>Email: admin@servercuatoi.com</p>
+        <p>Discord: discord.gg/servercuatoi</p>
+        <p>Facebook: fb.com/servercuatoi</p>
     </section>
 
-    <!-- Network Instructions Section -->
-    <section id="network">
-        <div class="container">
-            <h2>Hướng dẫn kết nối mạng LAN (ZeroTier) &amp; Radmin</h2>
-
-            <h3>Kết nối ZeroTier (mạng LAN ảo)</h3>
-            <ol>
-                <li>Tải và cài đặt ZeroTier:
-                    <ul>
-                        <li>Windows/macOS/Linux: truy cập <a href="https://www.zerotier.com/" target="_blank" rel="noopener">zerotier.com</a> và tải client phù hợp.</li>
-                    </ul>
-                </li>
-                <li>Mở ZeroTier One trên máy bạn.</li>
-                <li>Chọn <strong>Join Network</strong> và nhập <code>e4da7455b273ff3f</code> rồi nhấn <em>Join</em>.</li>
-                <li>Nếu chủ mạng (owner) yêu cầu phê duyệt, hãy thông báo cho người quản trị để họ cho phép thiết bị của bạn vào mạng.</li>
-                <li>Sau khi tham gia thành công, kiểm tra địa chỉ IP ảo được cấp trong giao diện ZeroTier — bây giờ các máy trong cùng mạng ZeroTier sẽ có thể kết nối như trong LAN.</li>
-                <li>Lưu ý bảo mật: chỉ chia sẻ Network ID với những người bạn tin tưởng. Nếu bạn quản lý mạng, cân nhắc bật quyền phê duyệt (Private) trong trang quản lý ZeroTier để kiểm soát thiết bị truy cập.</li>
-            </ol>
-
-            <h3>Kết nối Radmin (kết nối điều khiển từ xa)</h3>
-            <ol>
-                <li>Tải và cài đặt <a href="https://www.radmin.com/" target="_blank" rel="noopener">Radmin Viewer</a> hoặc <a href="https://www.radmin.com/" target="_blank" rel="noopener">Radmin Server</a> trên máy cần kết nối nếu cần.</li>
-                <li>Mở Radmin Viewer, chọn <strong>New Connection</strong>.</li>
-                <li>Trong ô <em>Address</em> nhập: <code>candycraft.com</code>.</li>
-                <li>Nhấn <em>Connect</em>. Khi được yêu cầu, nhập mật khẩu: <code>P@ssw0rd</code> và xác nhận.</li>
-                <li>Nếu kết nối bị chặn, kiểm tra tường lửa (firewall) trên cả 2 máy và đảm bảo port Radmin (mặc định 4899) được mở hoặc được chuyển tiếp đúng cách.</li>
-                <li>Lưu ý bảo mật: mật khẩu trên trang này là mật khẩu kết nối. Nếu đây là thông tin công khai, hãy cân nhắc thay đổi mật khẩu sau khi sử dụng để tránh truy cập trái phép.</li>
-            </ol>
-
-            <p><strong>Lưu ý chung:</strong> Hướng dẫn trên giả định bạn có quyền truy cập hợp lệ tới máy chủ/mạng. Việc sử dụng Network ID hoặc mật khẩu của người khác mà không có sự cho phép là hành vi không được phép và có thể vi phạm pháp luật. Luôn đảm bảo nhận được sự đồng ý trước khi kết nối.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Game Maicorap. All rights reserved.</p>
+        &copy; 2025 Server của chúng tôi. All rights reserved.
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // Hiệu ứng cuộn mượt + xuất hiện
-        window.addEventListener('scroll', () => {
-          document.querySelectorAll('section').forEach(sec => {
-            const rect = sec.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 100) sec.classList.add('visible');
-          });
-        });
-
-        // Nút sao chép nhanh mã mạng
-        document.addEventListener('DOMContentLoaded', () => {
-          document.querySelectorAll('code').forEach(code => {
-            const btn = document.createElement('button');
-            btn.textContent = '📋';
-            btn.className = 'copy-btn';
-            code.insertAdjacentElement('afterend', btn);
-            btn.addEventListener('click', async () => {
-              await navigator.clipboard.writeText(code.textContent);
-              btn.textContent = '✅';
-              setTimeout(() => (btn.textContent = '📋'), 1200);
-            });
-          });
-        });
-    </script>
 </body>
 </html>
